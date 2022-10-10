@@ -44,7 +44,7 @@ const Index = () => {
     async function approve() {
         if(active) {
             const token = new library.eth.Contract(PAIRABI, POD);
-            await token.methods.approve(LockerContract, BigInt(amount*(10**18))).send({from: account}).on('transactionHash', (hash) => setTx(hash));
+            await token.methods.approve(LockerContract, '0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff').send({from: account}).on('transactionHash', (hash) => setTx(hash));
         }
     }
 
@@ -153,7 +153,7 @@ const Index = () => {
                             <h1 className="self-end mb-2 mr-4 -mt-2 text-xs font-light text-[#171717]">Balance: {bal/(1000000000000000000)}</h1>
                         </div>
 
-                        <h1 className="mt-6 text-xs font-light">Current Tx: <Link href={'https://goerli.etherscan.io/tx/' + currTx}><a>https://goerli.etherscan.io/tx/{currTx}</a></Link></h1>
+                        <h1 className="mt-6 text-xs font-light">Current Tx: <Link href={'https://etherscan.io/tx/' + currTx}><a>https://etherscan.io/tx/{currTx}</a></Link></h1>
 
                         {tokenAllowance > 0 ? 
                             (
