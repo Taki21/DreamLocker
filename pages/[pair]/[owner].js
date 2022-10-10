@@ -50,14 +50,14 @@ const Index = () => {
     async function approve() {
         if(active) {
         const token = new library.eth.Contract(PAIRABI, addr);
-        await token.methods.approve("0xB26B9Ab803FdB32f306c815e798c5C4C45Ab7137", library.utils.toWei(amt)).send({from: account});
+        await token.methods.approve("0x4EDE75D310084674e9882E7e45fFB2EE00fD7681", library.utils.toWei(amt)).send({from: account});
         }
     }
 
     async function approveUSDC() {
         if(active) {
         const token = new library.eth.Contract(USDCABI, USDC);
-        await token.methods.approve("0xB26B9Ab803FdB32f306c815e798c5C4C45Ab7137", "69000000").send({from: account});
+        await token.methods.approve("0x4EDE75D310084674e9882E7e45fFB2EE00fD7681", "69000000").send({from: account});
         }
     }
 
