@@ -9,7 +9,9 @@ function getLibrary(provider) {
 function MyApp({ Component, pageProps }) {
   return (
     <Web3ReactProvider getLibrary={getLibrary}>
-      <Component {...pageProps} />
+      <div className='bg-gradient-to-r from-[#1b191b] to-[#1b061b] h-screen overflow-hidden'>
+        <Component {...pageProps} />
+      </div>
     </Web3ReactProvider>
   )
 }
