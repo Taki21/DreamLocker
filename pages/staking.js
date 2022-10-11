@@ -84,7 +84,7 @@ const Index = () => {
                 setPBal(library.utils.fromWei(b, 'ether'));
                 setInvalid(false);
                 setRewards(await locker.methods.amountEarned(account).call({from: account}));
-                setTvl(library.utils.fromWei(await token.methods.balanceOf(LockerContract).call({from: account}), 'ether'));
+                setTvl(library.utils.fromWei(await locker.methods.totalStaked().call({from: account}), 'ether'));
             } catch { 
                 setInvalid(true);
                 setBal(0);
@@ -156,7 +156,6 @@ const Index = () => {
                         <h1 className="mt-6 text-xs font-light">Current Tx: <Link href={'https://etherscan.io/tx/' + currTx}><a>https://etherscan.io/tx/{currTx}</a></Link></h1>
 
                         <div>
-                            <button onClick={approve} className="mt-6 mr-2 bg-[#65217c] hover:bg-[#390f47] transition-all px-4 py-3 rounded-xl">Approve POM2.0</button> 
                             <button onClick={stakeButton ? stakeTokens : unstakeTokens} className="mt-6 bg-[#65217c] hover:bg-[#390f47] transition-all px-4 py-3 rounded-xl">{stakeButton ? 'Stake' : 'Unstake'} POM2.0</button>
                         </div>
                         
