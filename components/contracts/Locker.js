@@ -1,4 +1,4 @@
-export const LockerContract = '0x208E23d98419dF820b5610ec4C44FFAC5D1D8CF9'
+export const LockerContract = '0xFfB98E98C0A4a4ef4A06533A4704Cb1c5D2a4EF3'
 
 export const LockerABI = [
 	{
