@@ -1,4 +1,4 @@
-export const LockerContract = '0xB26B9Ab803FdB32f306c815e798c5C4C45Ab7137'
+export const LockerContract = '0x95EC4BCc4Bb0d0338E636BE8958D2EC2Af9E2bBe'
 
 export const LockerABI = [
 	{
@@ -243,7 +243,7 @@ export const LockerABI = [
 						"type": "uint256"
 					}
 				],
-				"internalType": "struct ITakiLock.LockInfo[]",
+				"internalType": "struct IDreamLocker.LockInfo[]",
 				"name": "",
 				"type": "tuple[]"
 			}
@@ -279,7 +279,7 @@ export const LockerABI = [
 						"type": "uint256"
 					}
 				],
-				"internalType": "struct TakiLock.TokenInfo[]",
+				"internalType": "struct DreamLocker.TokenInfo[]",
 				"name": "",
 				"type": "tuple[]"
 			}
