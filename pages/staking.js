@@ -28,7 +28,7 @@ const Index = () => {
 
     const { active, account, library, connector, activate, deactivate } = useWeb3React()
 
-    const POD = '0x2b4557869B9F6a5e77e1054E9657D00f1323C151';
+    const POD = '0xc6807ddc8DfB31c66114eFFaDe883b3C8eABBA83';
 
     const now = new Date((new Date().getTime()) + (time*86400000));
 
