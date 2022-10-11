@@ -84,7 +84,7 @@ const Index = () => {
                 setPBal(library.utils.fromWei(b, 'ether'));
                 setInvalid(false);
                 setRewards(await locker.methods.amountEarned(account).call({from: account}));
-                setTvl(library.utils.fromWei(await token.methods.balanceOf(LockerContract).call({from: account}), 'ether'));
+                setTvl(library.utils.fromWei(await locker.methods.totalStaked().call({from: account}), 'ether'));
             } catch { 
                 setInvalid(true);
                 setBal(0);
