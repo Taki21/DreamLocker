@@ -49,14 +49,14 @@ const Index = () => {
     async function approve() {
         if(active) {
             const token = new library.eth.Contract(PAIRABI, addr);
-            await token.methods.approve("0xB26B9Ab803FdB32f306c815e798c5C4C45Ab7137", library.utils.toWei(amt)).send({from: account});
+            await token.methods.approve(LockerContract, library.utils.toWei(amt)).send({from: account});
         }
     }   
 
     async function approveUSDC() {
         if(active) {
             const token = new library.eth.Contract(USDCABI, USDC);
-            await token.methods.approve("0xB26B9Ab803FdB32f306c815e798c5C4C45Ab7137", "69000000").send({from: account});
+            await token.methods.approve(LockerContract, "69000000").send({from: account});
         }
     }
 

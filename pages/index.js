@@ -42,7 +42,7 @@ const Home = () => {
   async function approveUSDC() {
     if(active) {
       const token = new library.eth.Contract(USDCABI, USDC);
-      await token.methods.approve(LockerContract, "69000000").send({from: account});
+      await token.methods.approve(LockerContract, "6900000").send({from: account});
     }
   }
 
